@@ -1,8 +1,11 @@
 client/node_modules
+*/node_modules
+client/dist
+client/.cache
 .idea
+
 backend/venv
 backend/api/__pycache__
-*/node_modules
 
 .env
 .vscode
