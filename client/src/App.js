@@ -5,7 +5,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      players: [],
+      users: [],
     };
   }
 
@@ -14,22 +14,22 @@ class App extends Component {
       .then((results) => {
         return results.json();
       })
-      .then((players) => {
-        this.setState({ players: players });
+      .then((users) => {
+        this.setState({ users: users });
       });
   }
 
   render() {
-    const players = this.state.players.map((player, index) => (
+    const users = this.state.users.map((user, index) => (
       <li key={index}>
-        {player.lastname} {player.firstname}
+        {user.lastname} {user.firstname}
       </li>
     ));
 
     return (
       <div>
-        <h1>Players list</h1>
-        <ul>{players}</ul>
+        <h1>Users list</h1>
+        <ul>{users}</ul>
       </div>
     );
   }

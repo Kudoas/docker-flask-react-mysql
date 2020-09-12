@@ -1,7 +1,7 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
 
-from api.api import api, Player
+from api.api import api, User
 from api.models import db
 from api.config import Config
 

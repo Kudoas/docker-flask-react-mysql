@@ -1,4 +1,4 @@
-DBNAME:=cookle_db
+DBNAME:=app_db
 DOCKER_DNS:=db
 FLYWAY_CONF?=-url=jdbc:mysql://$(DOCKER_DNS):3306/$(DBNAME) -user=root -password=password
 

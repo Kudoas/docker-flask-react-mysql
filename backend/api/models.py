@@ -8,13 +8,13 @@ from sqlalchemy.ext.declarative import DeclarativeMeta
 db = SQLAlchemy()
 
 
-class Player(db.Model):
-    __tablename__ = 'player'
+class User(db.Model):
+    __tablename__ = 'user'
     firstname = Column(String(100), nullable=False, primary_key=True)
     lastname = Column(String(100), nullable=False)
 
     def __repr__(self):
-        return '<Player %r>' % self.firstname + ' ' + self.lastname
+        return '<User %r>' % self.firstname + ' ' + self.lastname
 
 
 def to_dict(obj):
