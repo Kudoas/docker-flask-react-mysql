@@ -1,1 +1,5 @@
-# Flask (REST API) + ReactJS + PostgreSQL with Docker
+# Flask (REST API) + ReactJS + MySQL with Docker
+
+## feature
+
+- flywayでのDBバージョン管理

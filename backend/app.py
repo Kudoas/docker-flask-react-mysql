@@ -22,12 +22,6 @@ def register_extensions(app):
 app = create_app(Config)
 
 
-@app.route('/', methods=['GET'])
-def root():
-    player = Player()
-    return player.get(), 200
-
-
 if __name__ == '__main__':
     app = create_app(Config)
     app.run(host='0.0.0.0', port=5000, debug=True, threaded=True)

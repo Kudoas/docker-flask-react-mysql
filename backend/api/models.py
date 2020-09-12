@@ -9,7 +9,7 @@ db = SQLAlchemy()
 
 
 class Player(db.Model):
-    __tablename__ = 'players'
+    __tablename__ = 'player'
     firstname = Column(String(100), nullable=False, primary_key=True)
     lastname = Column(String(100), nullable=False)
 

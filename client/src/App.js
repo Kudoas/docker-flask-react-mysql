@@ -10,11 +10,13 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch(CONFIG.API_BASE_URL).then((results) => {
-      results.json();
-      console.log(results);
-    });
-    // .then((players) => this.setState({ players: players }));
+    fetch(CONFIG.API_BASE_URL)
+      .then((results) => {
+        return results.json();
+      })
+      .then((players) => {
+        this.setState({ players: players });
+      });
   }
 
   render() {
