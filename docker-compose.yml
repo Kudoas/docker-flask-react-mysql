@@ -8,10 +8,18 @@ services:
       - "5432:5432"
     environment:
       - POSTGRES_DB=cookle_db
-      - POSTGRES_USER=user
+      - POSTGRES_USER=root
       - POSTGRES_PASSWORD=password
     volumes:
       - "./db/init:/docker-entrypoint-initdb.d/"
+
+  migration:
+    image: flyway/flyway
+    depends_on:
+      - db
+    container_name: cookle-migration
+    volumes:
+      - ./database/migration/schema:/flyway/sql
 
   api:
     container_name: cookle-api
